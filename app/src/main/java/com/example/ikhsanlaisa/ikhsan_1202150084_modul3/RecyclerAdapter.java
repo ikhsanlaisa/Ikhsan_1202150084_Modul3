@@ -1,6 +1,11 @@
 package com.example.ikhsanlaisa.ikhsan_1202150084_modul3;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -42,7 +49,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             Desc = itemView.findViewById(R.id.desc);
             Gambar = itemView.findViewById(R.id.gambar);
             itemList = itemView.findViewById(R.id.list_item);
+
         }
+
     }
 
     @Override
@@ -54,7 +63,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final RecyclerAdapter.ViewHolder holder, final int position) {
         //Memanggil Nilai/Value Pada View-View Yang Telah Dibuat pada Posisi Tertentu
         final String title = arrayListTitle.get(position);//Mengambil data sesuai dengan posisi yang telah ditentukan
         final String desc = arrayListDesc.get(position);//Mengambil data sesuai dengan posisi yang telah ditentukan
