@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.signin);
     }
 
+//    fungsi yang digunakan untuk login
     public void showLogin(View view) {
         if (username.getText().toString().equalsIgnoreCase("ead") && password.getText().toString().equalsIgnoreCase("mobile")){
             Toast.makeText(this, "Welcome", Toast.LENGTH_LONG).show();

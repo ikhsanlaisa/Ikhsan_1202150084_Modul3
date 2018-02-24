@@ -44,6 +44,7 @@ public class detailActivity extends AppCompatActivity {
         value.setText(Integer.toString(counts + 1) + "L");
     }
 
+    //    button plus jika diklik gambar akan berubah
     public void plus(View view) {
         counts++;
         if (value != null) {
@@ -78,6 +79,7 @@ public class detailActivity extends AppCompatActivity {
         }
     }
 
+    //    button minus jika diklik gambar akan berubah
     public void minus(View view) {
         counts--;
         if (value != null) {
