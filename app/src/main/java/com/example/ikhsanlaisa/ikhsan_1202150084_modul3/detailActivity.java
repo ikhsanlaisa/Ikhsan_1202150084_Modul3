@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class detailActivity extends AppCompatActivity {
-    private int counts = 1;
+    private static int counts = 0;
     private Button plus, minus;
     private TextView value;
     private ImageView battery;
@@ -40,9 +40,8 @@ public class detailActivity extends AppCompatActivity {
         value = findViewById(R.id.txt);
         battery = findViewById(R.id.battery);
 
-        battery.setImageResource(R.drawable.ic_battery_20_black_24dp);
-        value.setText(Integer.toString(counts) + "L");
-
+        battery.setImageResource(R.drawable.img_battery);
+        value.setText(Integer.toString(counts + 1) + "L");
     }
 
     public void plus(View view) {
